@@ -115,6 +115,9 @@ Vagrant.configure('2') do |config|
   ####Mesos dashboard
   config.vm.network "forwarded_port", guest: 35050, host: 35050
 
+# Port mappings for dev camp flask webservices
+config.vm.network "forwarded_port", guest: 5000, host: 5000
+
   # Create a private network, which allows host-only access to the machine
   # using a specific IP. For Marathon only.
   #config.vm.network "private_network", ip: "192.168.33.33/24"
